@@ -1,0 +1,27 @@
+<p>
+  hero works!
+</p>
+<h1>Ngif</h1>
+
+<div *ngIf="displayName; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+<h2>Superman</h2>
+</ng-template>
+<ng-template #elseBlock>
+<h2>pas d’affichage</h2> 
+</ng-template>
+
+<h1>NgSwitch</h1>
+
+<div [ngSwitch]="couleur">
+<div *ngSwitchCase="'rouge'">couleur est rouge</div>
+<div *ngSwitchCase="'bleu'"> couleur est bleu</div>
+<div *ngSwitchCase="'vert'"> couleur est vert</div>
+<div *ngSwitchDefault>Choisir couleur</div>
+</div>
+
+<h1> NgFor </h1>
+<div *ngFor="let color of colors; index as i">
+<h2>{{i}} {{color}}</h2>
+</div>
+  
