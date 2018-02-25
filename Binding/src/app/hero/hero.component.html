@@ -1,0 +1,41 @@
+<p>
+  hero works!
+</p>
+
+<div>
+  <h1> Property Binding </h1>
+  <input id="myId" [disabled]="isDisabled" type="text" value="Spiderman ">
+  <input id="myId2" bind-disabled="isDisabled" type="text" value="Spiderman">
+ </div>
+  
+ <div>
+    <h1> Class Binding </h1>
+    <h2 class="text-success">Hello World</h2>
+    <h2 [class]="successClass">Hello World</h2>
+    <h2 [ngClass]="messageClasses">Message</h2>
+  </div>
+    
+  <div>
+      <h1> Style Binding </h1>
+      <h2 [style.color]="hasError2 ? 'red' : 'green'">Style </h2> 
+      <h2 [style.color]="highlightColor">Style 2</h2>
+      <h2 [ngStyle]="titleStyles">Style 3</h2>
+  </div>
+      
+  <div>
+   <h1> Event Binding </h1>
+   <button (click)="onClick()">Saluer 1</button>
+   <h2>{{salut}}</h2>
+  </div>
+
+  <div>
+   <h1> Event Binding 2</h1>
+   <button (click)="onClick2($event)">Saluer 2</button>
+   <button (click)="salut = 'Hello Batman'">Saluer 3</button> 
+   <h2>{{salut}}</h2>
+ </div>
+
+ <div>
+   <input type="text" [(ngModel)]="name">
+    {{name}}       
+ </div>
